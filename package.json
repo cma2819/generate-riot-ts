@@ -1,0 +1,55 @@
+{
+  "name": "generate-riot-ts",
+  "version": "0.9.0",
+  "description": "Script to generate riot.js template files with typescript",
+  "keywords": [
+    "node.js",
+    "riot.js",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cma2819/generate-riot-ts"
+  },
+  "license": "MIT",
+  "author": "Cma",
+  "files": [
+    "public"
+  ],
+  "main": "public/index.js",
+  "bin": "public/generate.js",
+  "scripts": {
+    "build": "del-cli public && tsc",
+    "format": "prettier --write \"**/*.{ts,json,md}\" && sort-package-json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "husky": {
+      "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{ts,json,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.ts": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^12.7.12",
+    "@typescript-eslint/eslint-plugin": "^2.3.3",
+    "@typescript-eslint/parser": "^2.3.3",
+    "del-cli": "^3.0.0",
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "lint-staged": "^9.4.2",
+    "prettier": "^1.18.2",
+    "sort-package-json": "^1.22.1",
+    "typescript": "^3.6.4"
+  },
+  "peerDependencies": {
+    "riot": "^4.0.0"
+  }
+}
