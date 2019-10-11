@@ -18,7 +18,7 @@
     "template"
   ],
   "main": "public/index.js",
-  "bin": "public/generate.js",
+  "bin": "public/bin/index.js",
   "scripts": {
     "bin": "node public/bin",
     "build": "del-cli public && tsc",
