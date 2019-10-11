@@ -14,27 +14,32 @@
   "license": "MIT",
   "author": "Cma",
   "files": [
-    "public"
+    "public",
+    "template"
   ],
   "main": "public/index.js",
   "bin": "public/generate.js",
   "scripts": {
+    "bin": "node public/bin",
     "build": "del-cli public && tsc",
     "format": "prettier --write \"**/*.{ts,json,md}\" && sort-package-json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "husky": {
-      "pre-commit": "lint-staged"
+    "pre-commit": "lint-staged"
   },
   "lint-staged": {
-    "*.{ts,json,md}": [
-      "prettier --write",
-      "git add"
-    ],
     "*.ts": [
       "eslint --fix",
       "git add"
+    ],
+    "*.{ts,json,md}": [
+      "prettier --write",
+      "git add"
     ]
+  },
+  "dependencies": {
+    "template-file": "^3.1.0"
   },
   "devDependencies": {
     "@types/node": "^12.7.12",
