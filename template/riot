@@ -1,0 +1,22 @@
+<{{lower}}>
+    <style>
+        /* Describe the style of this component here. */
+    </style>
+    
+    <!-- Markup this component here. -->
+
+    <script>
+        // Define logics about this component here.
+        
+        import { {{upper}}Component } from './types'
+
+        function {{upper}}(): {{upper}}Component {
+            return {
+                state:{}
+            }
+        }
+
+        export default {{upper}}
+        
+    </script>
+</{{lower}}>
