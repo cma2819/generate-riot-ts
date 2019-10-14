@@ -5,7 +5,7 @@
     
     <!-- Markup this component here. -->
 
-    <script>
+    <script type="ts">
         // Define logics about this component here.
         
         import { {{upper}}Component } from './types'
