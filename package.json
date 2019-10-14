@@ -1,6 +1,6 @@
 {
   "name": "generate-riot-ts",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "Script to generate riot.js template files with typescript",
   "keywords": [
     "node.js",
